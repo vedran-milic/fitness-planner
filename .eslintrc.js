@@ -1,6 +1,10 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: { 'project': ['./tsconfig.json'] },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    "sourceType": "module"
+    // project: ['./tsconfig.json']
+  },
   plugins: [
     '@typescript-eslint'
   ],

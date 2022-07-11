@@ -5,12 +5,12 @@ interface Props {
   plan: Plan
 }
 
-const { plan } = defineProps<Props>();
+const props = defineProps<Props>();
 </script>
 
 <template>
-  <h1>{{ plan.id }}</h1>
-  <p>{{ plan.exerciseName }}</p>
+  <h1>{{ props.plan.id }}</h1>
+  <p>{{ props.plan.exerciseName }}</p>
 </template>
 
 <style>

@@ -11,12 +11,13 @@ getPlans();
 
 <template>
   <h1>This is planner list</h1>
-  <PlannerCard 
-    v-if="refPlans && refPlans.length"
-    v-for="plan in refPlans"
-    :key="plan.id"
-    :plan="plan"
-  />
+  <template v-if="refPlans && refPlans.length">
+    <PlannerCard
+      v-for="plan in refPlans"
+      :key="plan.id"
+      :plan="plan"
+    />
+  </template>
 </template>
 
 <style>
