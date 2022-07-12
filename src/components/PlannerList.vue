@@ -11,14 +11,25 @@ getPlans();
 
 <template>
   <h1>This is planner list</h1>
-  <template v-if="refPlans && refPlans.length">
+  <ul
+    v-if="refPlans && refPlans.length"
+    class="planner-list">
     <PlannerCard
       v-for="plan in refPlans"
       :key="plan.id"
       :plan="plan"
     />
-  </template>
+  </ul>
 </template>
 
 <style>
+  .planner-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+    width: 22.5rem; /* 360px */
+  }
 </style>
